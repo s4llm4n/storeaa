@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Menu from './Menu';
 import Auth from './Auth';
+import ToggleMenu from './ToggleMenu';
 
 export default function Navbar() {
   return (
@@ -10,20 +11,10 @@ export default function Navbar() {
             <a className="navbar-brand" href ="/#">
               <img src="/icon/logo.svg" width={60} height={60} />
             </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"/>
-            </button>
+            <ToggleMenu />
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
-                <Menu title="Home" active />
+                <Menu title="Home" active href='/games' />
                 <Menu title="Games"  />
                 <Menu title="Reward" />
                 <Menu title="Discover" />

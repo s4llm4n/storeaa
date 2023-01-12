@@ -17,10 +17,10 @@ export default function Auth(props: Partial<AuthProps>) {
                         </a>
 
                         <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
-                            <li><Link><a className="dropdown-item text-lg color-palette-2" href="#">My Profile</a></Link></li>
-                            <li><Link><a className="dropdown-item text-lg color-palette-2" href="#">Wallet</a></Link></li>
-                            <li><Link><a className="dropdown-item text-lg color-palette-2" href="#">Account Settings</a></Link></li>
-                            <li><Link><a className="dropdown-item text-lg color-palette-2" href="#">Log Out</a></Link></li>
+                            <li><Link className="dropdown-item text-lg color-palette-2" href="/member">My Profile</Link></li>
+                            <li><Link className="dropdown-item text-lg color-palette-2" href="#">Wallet</Link></li>
+                            <li><Link className="dropdown-item text-lg color-palette-2" href="/member/edit-profile">Account Settings</Link></li>
+                            <li><Link className="dropdown-item text-lg color-palette-2" href="/sign-in">Log Out</Link></li>
                         </ul>
                     </div>
                 </li>
@@ -28,13 +28,11 @@ export default function Auth(props: Partial<AuthProps>) {
     }
   return (
     <li className="nav-item my-auto">
-        <Link href="/sign-in">
-            <href
+        <Link href="/sign-in"
                 className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
                 role="button"
             >
                 Sign In
-            </href>
         </Link>
         </li>
   );
